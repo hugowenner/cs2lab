@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // 'sans' será sua fonte padrão (Roboto, para o corpo do texto)
+        // 'heading' será para títulos (Poppins)
+        sans: ['Roboto', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
