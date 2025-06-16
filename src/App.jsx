@@ -24,7 +24,8 @@ import {
   Zap,
   Cloud, // Adicionar
   Terminal, // Adicionar
-  BarChart2 // Adicionar
+  BarChart2,   // Adicionar
+  Heart
 } from 'lucide-react';
 
 const Portfolio = () => {
@@ -34,10 +35,11 @@ const Portfolio = () => {
   const navLinks = {
     home: 'Início',
     about: 'Sobre',
-    'education-skills': 'Formação & Skills', // << MUDANÇA AQUI
+    'education-skills': 'Formação & Skills',
     experience: 'Experiência',
     certifications: 'Certificações',
-    github: 'GitHub'
+    github: 'GitHub',
+    contact: 'Contato' // <-- ADICIONAR ESTA LINHA
   };
 
   useEffect(() => {
@@ -196,9 +198,7 @@ const Portfolio = () => {
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
 
-      {/* ======================================================================= */}
       {/* Navigation */}
-      {/* ======================================================================= */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
@@ -214,7 +214,7 @@ return (
                     activeSection === sectionId ? 'text-blue-400' : 'text-gray-300 hover:text-white'
                   }`}
                 >
-                  {navLinks[sectionId]} {/* Pega o nome do objeto */}
+                  {navLinks[sectionId]}
                 </button>
               ))}
             </div>
@@ -222,11 +222,10 @@ return (
         </div>
       </nav>
 
-      {/* ======================================================================= */}
       {/* 1. Hero Section (home) */}
-      {/* ======================================================================= */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
+        {/* ... (conteúdo da seção home sem alterações) ... */}
+         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
@@ -267,11 +266,10 @@ return (
         </div>
       </section>
 
-      {/* ======================================================================= */}
       {/* 2. About Section (about) */}
-      {/* ======================================================================= */}
       <section id="about" className="py-20 bg-black/20">
-        <div className="container mx-auto px-6">
+        {/* ... (conteúdo da seção about sem alterações) ... */}
+         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Sobre Mim
           </h2>
@@ -321,15 +319,14 @@ return (
         </div>
       </section>
 
-      {/* ======================================================================= */}
-      {/* 3. Education Section (education) */}
-      {/* ======================================================================= */}
-      <section id="education" className="py-20">
-        <div className="container mx-auto px-6">
+      {/* 3. Education & Skills Section (education-skills) */}
+      <section id="education-skills" className="py-20">
+        {/* ... (conteúdo da seção education-skills sem alterações) ... */}
+         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Formação Acadêmica
+            Formação e Competências
           </h2>
-          <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
+          <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm rounded-xl p-8 mb-20 hover:bg-white/10 transition-all duration-300">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-6">
               <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 rounded-lg shrink-0">
                 <GraduationCap size={40} className="text-white" />
@@ -339,16 +336,13 @@ return (
                 <p className="text-lg text-gray-300">Centro Universitário Newton Paiva</p>
               </div>
             </div>
-            
             <p className="text-gray-300 mb-6">
               Curso superior de tecnologia focado no ciclo de vida completo do software, desde a análise de requisitos e modelagem de dados até a implementação e manutenção de sistemas robustos e escaláveis.
             </p>
-
             <div className="flex items-center space-x-2 text-gray-400 mb-8">
               <Calendar size={16} />
               <span>Período: 2024 - 2026</span>
             </div>
-
             <div>
               <div className="flex justify-between items-center mb-2">
                 <h4 className="font-semibold text-gray-200">Progresso do Curso</h4>
@@ -362,13 +356,27 @@ return (
               </div>
             </div>
           </div>
+          <h3 className="text-3xl font-bold text-center mb-12 text-gray-200">Principais Habilidades Técnicas</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skills.map((skill) => {
+              const IconComponent = skill.icon;
+              return (
+                <div key={skill.name} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex items-center gap-4 mb-4">
+                    <IconComponent size={28} className="text-blue-400 shrink-0" />
+                    <h3 className="text-lg font-bold">{skill.name}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm leading-relaxed">{skill.description}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ======================================================================= */}
       {/* 4. Experience Section (experience) */}
-      {/* ======================================================================= */}
       <section id="experience" className="py-20 bg-black/20">
+        {/* ... (conteúdo da seção experience sem alterações) ... */}
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Experiência Profissional
@@ -400,41 +408,13 @@ return (
         </div>
       </section>
 
-      {/* ======================================================================= */}
-      {/* 5. Skills Section (skills) */}
-      {/* ======================================================================= */}
-      <section id="skills" className="py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Competências Técnicas
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {skills.map((skill) => {
-              const IconComponent = skill.icon;
-              return (
-                <div key={skill.name} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex items-center gap-4 mb-4">
-                    <IconComponent size={28} className="text-blue-400 shrink-0" />
-                    <h3 className="text-lg font-bold">{skill.name}</h3>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{skill.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ======================================================================= */}
-      {/* 6. Certifications Section (certifications) */}
-      {/* ======================================================================= */}
-      <section id="certifications" className="py-20 bg-black/20">
-        <div className="container mx-auto px-6">
+      {/* 5. Certifications Section (certifications) */}
+      <section id="certifications" className="py-20">
+         {/* ... (conteúdo da seção certifications sem alterações) ... */}
+         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Certificações e Formações
           </h2>
-          
-          {/* Grid de Formações Detalhadas */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {certifications.map((cert) => {
               const IconComponent = cert.icon;
@@ -452,8 +432,6 @@ return (
               );
             })}
           </div>
-          
-          {/* Card de Resumo Total */}
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Total de Horas Dedicadas</h3>
             <p className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
@@ -472,16 +450,13 @@ return (
         </div>
       </section>
 
-      {/* ======================================================================= */}
-      {/* 7. GitHub Section (github) */}
-      {/* ======================================================================= */}
-      <section id="github" className="py-20">
+      {/* 6. GitHub Section (github) */}
+      <section id="github" className="py-20 bg-black/20">
+        {/* ... (conteúdo da seção github sem alterações) ... */}
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Meu GitHub
           </h2>
-          
-          {/* Card de Destaque */}
           <div className="bg-gradient-to-r from-gray-700/20 to-gray-800/20 backdrop-blur-sm rounded-xl p-8 text-center mb-16 flex flex-col items-center">
             <Github size={48} className="text-white mb-4" />
             <h3 className="text-3xl font-bold mb-4">Explore Meus Repositórios</h3>
@@ -499,8 +474,6 @@ return (
               <ExternalLink size={16} className="opacity-70 ml-1" />
             </a>
           </div>
-
-          {/* Grid de Projetos */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {githubProjects.map((project, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
@@ -528,28 +501,53 @@ return (
       </section>
     
       {/* ======================================================================= */}
-      {/* Footer */}
+      {/* Footer / Contact Section */}
       {/* ======================================================================= */}
-      <footer className="py-12 bg-black/40 border-t border-white/10">
+      <footer id="contact" className="py-20 bg-black/40 border-t border-white/10">
         <div className="container mx-auto px-6 text-center">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">Vamos Conversar?</h3>
-            <p className="text-gray-300 mb-6">
-              "Acredito que a tecnologia deve ser uma ponte que conecta pessoas e resolve problemas reais."
-            </p>
+          <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Entre em Contato
+          </h2>
+          <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
+            Estou sempre aberto a novas oportunidades, colaborações e um bom bate-papo sobre tecnologia. Sinta-se à vontade para me contatar através de um dos canais abaixo.
+          </p>
+          
+          {/* Grid de Contatos */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
+            
+            {/* LinkedIn */}
+            <a href="URL_DO_SEU_LINKEDIN" target="_blank" rel="noopener noreferrer" className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 hover:scale-105 transition-all duration-300">
+              <Linkedin size={28} className="text-blue-400" />
+              <span className="mt-2 font-semibold">LinkedIn</span>
+            </a>
 
-            <div className="flex justify-center space-x-6">
-              <a href="mailto:hugowenner5@gmail.com" className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 rounded-full hover:scale-105 transition-transform">
-                <Mail size={20} />
-                <span>Entrar em Contato</span>
-              </a>
-            </div>
+            {/* GitHub */}
+            <a href="https://github.com/hugowenner" target="_blank" rel="noopener noreferrer" className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 hover:scale-105 transition-all duration-300">
+              <Github size={28} className="text-gray-300" />
+              <span className="mt-2 font-semibold">GitHub</span>
+            </a>
+
+            {/* Email */}
+            <a href="mailto:hugowenner5@gmail.com" className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 hover:scale-105 transition-all duration-300">
+              <Mail size={28} className="text-purple-400" />
+              <span className="mt-2 font-semibold">Email</span>
+            </a>
+
+            {/* WhatsApp */}
+            <a href="https://wa.me/5531971836063" target="_blank" rel="noopener noreferrer" className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center hover:bg-white/10 hover:scale-105 transition-all duration-300">
+              <Phone size={28} className="text-green-400" />
+              <span className="mt-2 font-semibold">WhatsApp</span>
+            </a>
+
           </div>
-          <div className="flex justify-center space-x-4 text-gray-400">
-            <Globe size={16} />
-            <span>Belo Horizonte, MG</span>
-            <span>•</span>
-            <span>Disponível para oportunidades</span>
+
+          <div className="text-center text-gray-500 mt-16 text-sm">
+            <p className="flex items-center justify-center gap-2">
+              Desenvolvido com <Heart size={14} className="text-red-500" /> por Hugo Wenner
+            </p>
+            <p className="mt-1">
+              Estudante de Análise e Desenvolvimento de Sistemas
+            </p>
           </div>
         </div>
       </footer>
