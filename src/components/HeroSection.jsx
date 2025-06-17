@@ -1,66 +1,91 @@
 // src/components/HeroSection.jsx
-import React, { useEffect, useState } from 'react';
-import { User, Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from 'lucide-react';
-import hugoPhoto from '../assets/hugo.jpg'; // O caminho para sua foto, pode ajustar se mudou
+import React from 'react';
+import { Github, Linkedin, ArrowRight } from 'lucide-react';
+import hugoPhoto from '../assets/hugo.jpg';
 
 const HeroSection = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <div className={`transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="w-48 h-48 mx-auto mb-8 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-            <div className="absolute inset-1 rounded-full overflow-hidden">
-              <img
-                src={hugoPhoto}
-                alt="Foto de perfil de Hugo Wenner"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent pb-4">
-            Hugo Wenner
-          </h1>
+    // Removido o gradiente de fundo específico para usar o gradiente principal do App.jsx
+    <section id="home" className="min-h-screen flex items-center justify-center py-20 md:py-0">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          <p className="text-2xl md:text-3xl mb-8 text-gray-300">
-            Tecnólogo em Análise e Desenvolvimento de Sistemas
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <MapPin size={16} />
-              <span>Belo Horizonte, MG</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <Phone size={16} />
-              <span>(31) 97183-6063</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
-              <Mail size={16} />
-              <span>hugowenner5@gmail.com</span>
+          {/* --- Bloco de Texto (Esquerda) --- */}
+          <div data-aos="fade-right" className="text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Hugo Wenner
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-gray-300 mb-6">
+              Tecnólogo em Análise e Desenvolvimento de Sistemas
+            </p>
+
+            {/* Frase Filosófica */}
+            <blockquote className="my-8 border-l-4 border-blue-500 pl-4">
+              <p className="text-lg italic text-gray-400">
+                "Não espere por oportunidades extraordinárias. Agarre as ocasiões comuns e as faça grandes."
+              </p>
+              <cite className="text-sm text-gray-500 block mt-2">- Orison Swett Marden</cite>
+            </blockquote>
+
+            {/* Botões de Ação */}
+            <div className="flex justify-center md:justify-start space-x-4 mt-10">
+              <a
+                href="URL_DO_SEU_LINKEDIN" // <-- ATUALIZE AQUI COM SEU LINK REAL
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300"
+              >
+                <Linkedin size={20} />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/hugowenner"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 bg-gray-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-600 hover:shadow-gray-500/30 transition-all duration-300"
+              >
+                <Github size={20} />
+                <span>GitHub</span>
+                <ArrowRight size={20} className="opacity-70 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
-          <div className="flex justify-center space-x-6">
-            <a href="#" className="p-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full hover:scale-110 transition-transform">
-              <Linkedin size={24} />
-            </a>
-            <a href="#" className="p-3 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full hover:scale-110 transition-transform">
-              <Github size={24} />
-            </a>
+
+          {/* --- Bloco da Imagem (Direita) --- */}
+          <div data-aos="fade-left" className="flex justify-center">
+            <div className="relative w-80 h-80 md:w-96 md:h-96">
+              {/* Efeito de borda com gradiente e animação */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl animate-pulse-slow opacity-60"></div>
+              
+              <div className="relative w-full h-full rounded-full overflow-hidden p-2 bg-zinc-900 shadow-2xl">
+                <img
+                  src={hugoPhoto}
+                  alt="Foto de perfil de Hugo Wenner"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
           </div>
-        </div> {/* <--- ESTA DIV DE FECHAMENTO ESTAVA FALTANDO! (Linha 59) */}
-      </div> {/* Esta div já estava lá, fechando o "container mx-auto" */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown size={32} className="text-white/100" />
+
+        </div>
       </div>
     </section>
   );
 };
+
+// Adicione esta animação customizada no seu arquivo tailwind.config.js se quiser o pulso mais lento
+/*
+// tailwind.config.js
+theme: {
+  extend: {
+    animation: {
+      'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+    }
+  }
+}
+*/
 
 export default HeroSection;

@@ -1,95 +1,164 @@
 // src/data.js
 
-import {
-  Code,
-  Server,
-  Shield,
-  BarChart2,
-  Terminal,
-  Database,
+// Importação UNIFICADA de todos os ícones necessários
+import { 
+  ShieldCheck, 
+  Code, 
+  Database, 
+  Server, 
+  Terminal, 
+  BrainCircuit, 
+  Linkedin, 
+  Shield,   
+  BarChart2, 
   Cloud,
+  // Certifique-se de que TODOS os ícones das habilidades também estão aqui:
+  Box, // Para frameworks/bibliotecas como React, Node.js, Tailwind CSS
+  Lightbulb, // Para Resolução de Problemas
+  GitBranch // Para Git & GitHub
 } from 'lucide-react';
 
 export const certifications = [
   {
-    title: 'Front-End com React & JavaScript',
-    platform: 'Alura',
-    description: 'Desenvolvimento de aplicações web modernas e reativas, com foco em componentização, estado e performance.',
-    icon: Code
+    icon: Code, // 
+    title: 'Programação (86h)', // 
+    platform: 'Alura', // 
+    description: 'Foco em Python, Java, JavaScript com Node.js e boas práticas de refatoração de código.' // 
   },
   {
-    title: 'Back-End com Python & Django',
-    platform: 'Alura',
-    description: 'Criação de APIs RESTful robustas, com manipulação de banco de dados, autenticação e boas práticas de desenvolvimento.',
-    icon: Server
+    icon: Database, // 
+    title: 'Data Science (80h)', // 
+    platform: 'Alura', // 
+    description: 'Conhecimentos em manipulação de dados com SQL (Oracle, MySQL, SQL Server) e criação de Dashboards com Excel.' // 
   },
   {
-    title: 'Fundamentos de Cibersegurança',
-    platform: 'Alura',
-    description: 'Compreensão de ameaças, análise de vulnerabilidades, e aplicação de políticas de segurança para proteger sistemas e redes.',
-    icon: Shield
+    icon: Server, // 
+    title: 'DevOps (58h)', // 
+    platform: 'Alura', // 
+    description: 'Experiência em automação com PowerShell, linha de comando no Windows (CMD) e exploração da nuvem com AWS.' // 
   },
   {
-    title: 'Business Intelligence com Power BI',
-    platform: 'Alura',
-    description: 'Coleta, tratamento e visualização de dados para criar dashboards interativos que auxiliam na tomada de decisões de negócio.',
-    icon: BarChart2
+    icon: ShieldCheck, // 
+    title: 'Cibersegurança (55h)', // 
+    platform: 'Alura', // 
+    description: 'Habilidades em Pentest, segurança de redes (Firewall, WAF), modelagem de ameaças e segurança em aplicações web.' // 
   },
   {
-    title: 'Infraestrutura com Linux',
-    platform: 'Alura',
-    description: 'Gerenciamento completo de servidores Linux, desde a instalação e configuração de serviços até a automação com Shell Script.',
-    icon: Terminal
+    icon: Terminal, // 
+    title: 'Linux (30h)', // 
+    platform: 'Alura', // 
+    description: 'Gerenciamento de diretórios, arquivos e permissões, além da criação de scripts para automação de tarefas.' // 
   },
   {
-    title: 'Data Science: Análise e Visualização',
-    platform: 'Alura',
-    description: 'Análise de dados com Python, utilizando bibliotecas como Pandas e Matplotlib para extrair e comunicar insights valiosos.',
-    icon: Database
+    icon: BrainCircuit, // 
+    title: 'Inteligência Artificial (14h)', // 
+    platform: 'Alura', // 
+    description: 'Criação de ferramentas com a API do Gemini e personalização de rotinas de estudo com ChatGPT.' // 
   }
 ];
 
 export const skills = [
+  // Linguagens de Programação
   {
-    name: 'JavaScript & React',
-    description: 'Para criar interfaces de usuário dinâmicas e interativas, consumindo APIs e gerenciando o estado da aplicação de forma eficiente.',
-    icon: Code
+    name: 'JavaScript',
+    icon: Code,
+    color: 'text-yellow-400',
+    description: 'Proficiência no desenvolvimento front-end interativo e back-end com Node.js.',
+    category: 'Linguagens de Programação',
+    level: 'Avançado',
   },
   {
     name: 'Python',
-    description: 'Linguagem versátil que aplico em automação, desenvolvimento de back-end (APIs RESTful) e em projetos de análise de dados.',
-    icon: Code
+    icon: Code,
+    color: 'text-blue-500',
+    description: 'Experiência com scripts, automação, e desenvolvimento web básico.',
+    category: 'Linguagens de Programação',
+    level: 'Intermediário',
   },
   {
     name: 'Java',
-    description: 'Utilizada para construir aplicações robustas e escaláveis do lado do servidor, com foco em performance e segurança corporativa.',
-    icon: Server
+    icon: Code,
+    color: 'text-red-500',
+    description: 'Conhecimento em desenvolvimento backend e sistemas empresariais.',
+    category: 'Linguagens de Programação',
+    level: 'Intermediário',
+  },
+  // Frameworks & Bibliotecas
+  {
+    name: 'React',
+    icon: Box,
+    color: 'text-cyan-400',
+    description: 'Construção de interfaces de usuário modernas e reativas.',
+    category: 'Frameworks & Bibliotecas',
+    level: 'Avançado',
   },
   {
-    name: 'SQL',
-    description: 'Fundamental para gerenciar e consultar bancos de dados relacionais, garantindo a integridade e a performance na manipulação dos dados.',
-    icon: Database
+    name: 'Node.js',
+    icon: Box,
+    color: 'text-green-500',
+    description: 'Desenvolvimento de APIs RESTful e aplicações de back-end escaláveis.',
+    category: 'Frameworks & Bibliotecas',
+    level: 'Intermediário',
   },
   {
-    name: 'AWS',
-    description: 'Conhecimento em serviços essenciais para hospedar aplicações, gerenciar infraestrutura como código e garantir escalabilidade.',
-    icon: Cloud
+    name: 'Tailwind CSS',
+    icon: Box,
+    color: 'text-teal-400',
+    description: 'Estilização rápida e responsiva de interfaces de usuário.',
+    category: 'Frameworks & Bibliotecas',
+    level: 'Avançado',
+  },
+  // Banco de Dados
+  {
+    name: 'SQL (MySQL, PostgreSQL)',
+    icon: Database,
+    color: 'text-orange-400',
+    description: 'Criação e manipulação de bancos de dados relacionais.',
+    category: 'Banco de Dados',
+    level: 'Intermediário',
+  },
+  // Ferramentas & DevOps
+  {
+    name: 'Git & GitHub',
+    icon: GitBranch,
+    color: 'text-gray-400',
+    description: 'Controle de versão e colaboração em projetos de software.',
+    category: 'Ferramentas & DevOps',
+    level: 'Avançado',
   },
   {
     name: 'Linux',
-    description: 'Proficiência no sistema operacional padrão para servidores, incluindo gerenciamento de processos e scripts em shell.',
-    icon: Terminal
+    icon: Terminal,
+    color: 'text-purple-400',
+    description: 'Operação e scripts básicos em ambiente Linux.',
+    category: 'Ferramentas & DevOps',
+    level: 'Básico',
   },
   {
-    name: 'Cibersegurança',
-    description: 'Aplicação de conceitos para proteger sistemas, incluindo análise de vulnerabilidades e implementação de boas práticas de defesa.',
-    icon: Shield
+    name: 'AWS (Básico)',
+    icon: Cloud,
+    color: 'text-orange-500',
+    description: 'Conhecimento fundamental em serviços de nuvem AWS.',
+    category: 'Ferramentas & DevOps',
+    level: 'Básico',
+  },
+  // Conceitos & Metodologias
+  {
+    name: 'Cibersegurança (Básico)',
+    icon: Shield,
+    color: 'text-red-600',
+    description: 'Entendimento de conceitos básicos de segurança de aplicações e redes.',
+    category: 'Conceitos & Metodologias',
+    level: 'Básico',
   },
   {
-    name: 'Power BI',
-    description: 'Criação de dashboards e relatórios interativos para transformar dados em insights visuais que auxiliam na tomada de decisões.',
-    icon: BarChart2
-  }
+    name: 'Resolução de Problemas',
+    icon: Lightbulb,
+    color: 'text-blue-300',
+    description: 'Abordagem lógica para identificar e solucionar desafios técnicos.',
+    category: 'Soft Skills', 
+    level: 'Avançado',
+  },
 ];
 
 export const experiences = [
@@ -155,9 +224,9 @@ export const githubProjects = [
 export const navLinks = {
   home: 'Início',
   about: 'Sobre',
-  'education-certifications': 'Formação e Certificações', // Alterado
+  'education-certifications': 'Formação & Certificações', 
   experience: 'Experiência',
-  skills: 'Skills', // Adicionado
+  skills: 'Skills', 
   github: 'GitHub',
   contact: 'Contato'
 };

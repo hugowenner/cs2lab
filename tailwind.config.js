@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/data.js", // Adicionado para escanear classes de cor de skills
   ],
   theme: {
     extend: {
