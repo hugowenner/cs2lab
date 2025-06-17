@@ -1,79 +1,55 @@
-// src/components/AboutSection.jsx
 import React from 'react';
-import { TrendingUp, Award, Zap, Target } from 'lucide-react';
+import { Target, Heart, Zap, Gamepad2 } from 'lucide-react';
+import { aboutSectionContent } from '../data'; // Assuming aboutSectionContent will be exported from data.js
 
 const AboutSection = () => {
   return (
-    // A classe 'bg-black/20' foi removida daqui para usar o fundo gradiente principal
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-6">
-        {/* Linha de Separação: MOVIDA PARA FORA DO DIV DO TÍTULO E AGORA NO LOCAL CORRETO */}
-        <div className="border-t border-white/40 my-10 max-w-4xl mx-auto" data-aos="fade-in" data-aos-delay="100"></div>
-
-        {/* Título da Seção */}
-        <div className="text-center mb-16" data-aos="fade-down">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-            Minha Trajetória
+    <section id="about" className="py-20 bg-gray-800">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+            {aboutSectionContent.title}
           </h2>
-          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Da resolução de problemas à criação de soluções.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {aboutSectionContent.subtitle}
           </p>
         </div>
 
-        
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-6 rounded-xl border border-orange-500/20">
+              <Target className="w-8 h-8 text-orange-400 mb-4" />
+              <h3 className="text-2xl font-bold mb-3 text-orange-400">{aboutSectionContent.mission.title}</h3>
+              <p className="text-gray-300">
+                {aboutSectionContent.mission.description}
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-5 gap-16 items-center">
-          {/* Coluna da Narrativa (Esquerda) */}
-          <div className="md:col-span-3 space-y-6" data-aos="fade-right">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Minha jornada na tecnologia é movida pela curiosidade e pelo desejo de transformar problemas complexos em soluções eficientes. Comecei no suporte técnico, onde aprendi a ouvir e a entender as dores reais dos usuários, atendendo mais de 3000 pessoas e garantindo a continuidade de suas operações.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Essa experiência na linha de frente foi a base para o meu próximo passo: não apenas resolver problemas, mas criar as ferramentas que os previnem. Hoje, como Tecnólogo em Análise e Desenvolvimento de Sistemas, com mais de <span className="text-blue-400 font-bold">315 horas</span> em certificações, meu foco é construir aplicações intuitivas, seguras e que gerem um impacto real.
-            </p>
-            <div className="flex items-start space-x-3 text-purple-400 pt-4">
-              <Target size={24} className="mt-1 shrink-0" />
-              <div>
-                <span className="font-semibold text-xl">Meu Objetivo</span>
-                <p className="text-gray-300">
-                  Busco colaborar em projetos desafiadores onde eu possa aplicar minha paixão por código e análise para criar tecnologia que facilite a vida das pessoas e impulsione o crescimento de negócios.
-                </p>
+            <div className="bg-gradient-to-r from-gray-700 to-gray-600 p-6 rounded-xl border border-orange-500/20">
+              <Heart className="w-8 h-8 text-red-400 mb-4" />
+              <h3 className="text-2xl font-bold mb-3 text-red-400">{aboutSectionContent.values.title}</h3>
+              <div className="grid grid-cols-2 gap-2 text-gray-300">
+                {aboutSectionContent.values.items.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <Zap className="w-4 h-4 text-yellow-400" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Coluna com Destaques Visuais (Direita) */}
-          <div className="md:col-span-2 space-y-8" data-aos="fade-left" data-aos-delay="200">
-            {/* Item 1 */}
-            <div className="flex items-start gap-4">
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-3 rounded-lg">
-                <TrendingUp className="text-blue-400" size={28} />
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-1">Da Resolução ao Desenvolvimento</h3>
-                <p className="text-gray-400">Evolução de carreira focada em criar, não apenas consertar.</p>
-              </div>
-            </div>
-
-            {/* Item 2 */}
-            <div className="flex items-start gap-4">
-              <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 p-3 rounded-lg">
-                <Award className="text-green-400" size={28} />
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-1">Foco em Qualidade e Certificação</h3>
-                <p className="text-gray-400">Aprendizado contínuo como base para entregar o melhor resultado.</p>
-              </div>
-            </div>
-            
-            {/* Item 3 */}
-            <div className="flex items-start gap-4">
-              <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 p-3 rounded-lg">
-                <Zap className="text-orange-400" size={28} />
-              </div>
-              <div>
-                <h3 className="font-bold text-xl mb-1">Energia para Criar e Inovar</h3>
-                <p className="text-gray-400">Paixão por transformar ideias em software funcional e elegante.</p>
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 p-8 rounded-xl border border-orange-500/30">
+              <Gamepad2 className="w-12 h-12 text-orange-400 mb-4 mx-auto" />
+              <h3 className="text-2xl font-bold text-center mb-4 text-orange-400">{aboutSectionContent.philosophy.title}</h3>
+              <p className="text-gray-300 text-center mb-4">
+                {aboutSectionContent.philosophy.description}
+              </p>
+              <div className="text-center">
+                <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  {aboutSectionContent.philosophy.tag}
+                </span>
               </div>
             </div>
           </div>
