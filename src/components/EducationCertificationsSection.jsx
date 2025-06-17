@@ -5,7 +5,7 @@ import { certifications } from '../data'; // Verifique se este caminho está cor
 
 const EducationCertificationsSection = ({ courseProgress }) => {
   return (
-    <section id="education" className="py-20">
+    <section id="education-certifications" className="py-20">
       <div className="container mx-auto px-6">
         {/* Título da Seção */}
         <div className="text-center mb-20">

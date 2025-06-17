@@ -19,7 +19,7 @@ const SkillsSection = () => {
 
   // Mapeamento de níveis para largura da barra de progresso e cor
   const levelMap = {
-    'Básico': { width: '33%', text: 'Básico', color: 'bg-red-400' }, // Usando red-400 do primeiro input
+    'Básico': { width: '33%', text: 'Básico', color: 'bg-red-400' },
     'Intermediário': { width: '66%', text: 'Intermediário', color: 'bg-yellow-500' },
     'Avançado': { width: '100%', text: 'Avançado', color: 'bg-green-500' },
   };
@@ -45,24 +45,26 @@ const SkillsSection = () => {
                 return (
                   <div
                     key={skill.name}
-                    // Adicionado text-center aqui para centralizar todo o conteúdo do card
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col justify-between hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 text-center"
-                    data-aos="fade-up" // Mantendo animação suave para os cards
-                    data-aos-delay={`${index * 50}`} // Atraso levemente menor
+                    // Adicionado 'items-center' para centralizar verticalmente o conteúdo do card (se for flex-col)
+                    // Removido 'text-center' do card principal, pois o flexbox fará o trabalho
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-between hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1"
+                    data-aos="fade-up"
+                    data-aos-delay={`${index * 50}`}
                   >
-                    <div>
+                    <div className="flex flex-col items-center"> {/* Novo flex container para ícone, título e descrição */}
                       <div
-                        // Removido gap-4, adicionado justify-center
                         className="flex items-center justify-center mb-4"
                       >
                         <IconComponent size={28} className={`${skill.color} shrink-0`} />
-                        <h4 className="text-lg font-bold ml-2">{skill.name}</h4> {/* Adicionado ml-2 para um pequeno espaçamento entre ícone e texto */}
+                        <h4 className="text-lg font-bold ml-2">{skill.name}</h4>
                       </div>
-                      <p className="text-gray-300 text-sm leading-relaxed mb-4">{skill.description}</p>
+                      {/* A descrição agora também é centralizada pelo items-center do pai */}
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4 text-center">{skill.description}</p>
                     </div>
 
                     {/* Nível de Proficiência */}
-                    <div className="mt-auto pt-4 border-t border-white/10">
+                    <div className="mt-auto pt-4 border-t border-white/10 w-full"> {/* Adicionado w-full */}
+                      {/* Este flexbox já está justificando o espaço entre os itens */}
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-gray-400 text-sm">Nível:</span>
                         <span className={`text-sm font-semibold ${skillLevel.color.replace('bg-', 'text-')}`}>
