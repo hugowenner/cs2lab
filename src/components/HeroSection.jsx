@@ -1,18 +1,34 @@
 import React from 'react';
 import { Users, Trophy } from 'lucide-react';
-import { heroContent } from '../data'; // Assuming heroContent will be exported from data.js
+import { heroContent } from '../data';
 
 const HeroSection = ({ scrollToSection }) => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-      <div className="absolute inset-0 opacity-10">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden text-white">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline // Importante para reprodução automática em dispositivos móveis
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/videos/VIDEOCS.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+
+      {/* Overlay para escurecer o vídeo e melhorar a legibilidade do texto */}
+      <div className="absolute inset-0 bg-gray-900 opacity-70 z-10"></div> {/* Ajuste a opacidade conforme necessário */}
+      
+      {/* Animação de background existente, ajuste z-index para ficar acima do vídeo e abaixo do conteúdo */}
+      <div className="absolute inset-0 opacity-10 z-20"> {/* Ajustado para z-20 */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-500 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
       
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+      {/* Conteúdo da Seção Hero - z-index mais alto para ficar visível */}
+      <div className="relative z-30 text-center max-w-4xl mx-auto px-4"> {/* Ajustado para z-30 */}
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
             {heroContent.title}
