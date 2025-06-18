@@ -27,7 +27,7 @@ export const aboutSectionContent = {
     subtitle: "Forjada nas chamas da competição em **19 de Dezembro de 2011** 📅, carregamos uma essência inabalável: Força, Disciplina e Espírito de Equipe.",
     foundersTitle: "⚔️ Arquitetos da Lenda: Membros Fundadores", // Melhorado
     founders: [
-      "LorD (Fundador) 👑",
+      "LorD 👑",
       "Perna Peluda 🦊",
       "BlackVibes ♠️",
       "BANDIT_RJ 🔪",
