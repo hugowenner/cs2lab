@@ -11,7 +11,7 @@ const LegendsSection = () => {
             {legendsContent.title}
           </h2>
           {legendsContent.subtitle && (
-             <p className="text-xl text-gray-300">
+             <p className="text-xl text-white"> {/* ALTERADO: de text-gray-300 para text-white */}
                {legendsContent.subtitle}
              </p>
           )}

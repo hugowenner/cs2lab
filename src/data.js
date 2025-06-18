@@ -1,38 +1,32 @@
 // src/data.js (ou o caminho correto para o seu arquivo de dados)
 
-// Importações de ícones para as seções (ajuste conforme o que você realmente usa)
+// Importações de ícones para as seções (ajustado para remover não utilizados)
 import {
-  Heart,
-  Handshake,
-  Sparkles,
-  Brain,
-  Shield,
-  SmilePlus,
-  Award,
-  MessageCircle,
-  Users,
-  Trophy,
-  Calendar,
-  ShieldCheck,
-  TrendingUp,
-  Crown, // Adicionado para as lendas
-  Dribbble, // Adicionado para as lendas
-  Skull, // Adicionado para as lendas
-  BookOpen,
-  MapPin,
-  Swords,
-  UsersRound,
-  Gamepad2,
-  BellRing,
-  Megaphone,
-  BookA,
-  Gavel,
-  Scale,
-  Smile,
-  Zap,
-  Star,
-  Target,
-  Trophy as TrophyIcon // Renomeado para evitar conflito com Trophy do HeroSection
+  Handshake, // Usado em ConductRules
+  Brain, // Usado em ConductRules e LegendsSection
+  Shield, // Usado em ConductRules (embora não diretamente no item.icon)
+  Award, // Usado em ConductRules
+  MessageCircle, // Usado em ContactSection
+  Users, // Usado em HeroSection e HistorySection
+  Trophy, // Usado em HeroSection
+  ShieldCheck, // Usado em HistorySection
+  Crown, // Usado em LegendsSection
+  Dribbble, // Usado em LegendsSection
+  Skull, // Usado em LegendsSection
+  Swords, // Usado em ServicesSection
+  UsersRound, // Usado em ServicesSection
+  Gamepad2, // Usado em ServicesSection
+  BellRing, // Usado em ServicesSection
+  Megaphone, // Usado em ServicesSection
+  BookA, // Usado em ServicesSection
+  Calendar, // Usado em HistorySection
+  TrendingUp, // Usado em HistorySection
+  SmilePlus, // Usado em ConductRules
+  // Removemos Sparkles, MapPin, Gavel, Scale, Smile, Zap, Star, Target,
+  // e Trophy as TrophyIcon (pois já usamos Trophy do HeroSection, renomeado para evitar conflito).
+  // Nota: Se 'Shield' for apenas para o exemplo do Brain, pode ser removido se não for usado nos items.
+  // Pelo que vejo, 'Shield' não é usado nos `items` de `values`, apenas como importação genérica.
+  // Vamos manter 'Shield' por enquanto, pois está na lista original, mas você pode revisar.
 } from 'lucide-react';
 
 // Conteúdo da Seção Hero
@@ -77,12 +71,12 @@ export const aboutSectionContent = {
         description: "Tratar todos os membros, adversários e a comunidade com dignidade e cortesia, reconhecendo a diversidade de opiniões e estilos de jogo.",
       },
       {
-        icon: Users,
+        icon: Users, // Mantendo Users, mas poderia ser um ícone mais específico de "trabalho em equipe"
         label: "Trabalho em Equipe",
         description: "Colaborar ativamente, apoiar uns aos outros e priorizar os objetivos coletivos acima dos individuais para alcançar o sucesso mútuo.",
       },
       {
-        icon: TrophyIcon, // Usando TrophyIcon para evitar conflito
+        icon: Trophy, // Usando Trophy, pois TrophyIcon foi removido para evitar conflitos desnecessários
         label: "Excelência",
         description: "Buscar constantemente a melhoria em todas as áreas, desde a habilidade no jogo até a comunicação e a conduta ética.",
       },
@@ -92,7 +86,7 @@ export const aboutSectionContent = {
         description: "Desenvolver e aplicar táticas inteligentes e adaptáveis, pensando coletivamente para superar desafios e dominar o campo de batalha.",
       },
       {
-        icon: ShieldCheck,
+        icon: ShieldCheck, // Mantendo ShieldCheck como ícone de Integridade
         label: "Integridade",
         description: "Agir com honestidade e transparência em todas as situações, mantendo a lealdade à equipe e aos princípios da comunidade.",
       },
@@ -182,7 +176,6 @@ export const contactContent = {
     description: "Onde a ação acontece! Converse com a equipe, encontre parceiros para jogar e fique por dentro das últimas novidades.",
     buttonText: "Entrar no Discord",
   },
-  // Removido o bloco steam
   quote: {
     text: "A verdadeira força de um time não está apenas nas vitórias, mas na jornada que compartilhamos juntos.",
     tagline: "- Equipe иo.ƒear™",
@@ -192,11 +185,9 @@ export const contactContent = {
 // Conteúdo do Rodapé
 export const footerContent = {
   subtitle: "Sua comunidade de Counter-Strike 2.",
-  // Ajustado para um objeto para melhor organização
   copyright: "© {year} иo.ƒear™ Gaming Team. Todos os direitos reservados.",
   developerInfo: "Desenvolvido por Hugo Wenner - hugowenne5@gmail.com",
 };
-
 
 // Itens de navegação para o NavBar
 export const navItems = [

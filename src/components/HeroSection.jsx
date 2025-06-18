@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Trophy } from 'lucide-react';
+import { Users, MessageCircle } from 'lucide-react'; // ALTERADO: Trophy para MessageCircle
 import { heroContent } from '../data';
 
 const HeroSection = ({ scrollToSection }) => {
@@ -59,7 +59,7 @@ const HeroSection = ({ scrollToSection }) => {
             onClick={() => window.open('https://discord.gg/HGWT47n5ww', '_blank')}
             className="border-2 border-blue-electric-500 text-blue-electric-400 hover:bg-blue-electric-500 hover:text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
           >
-            <Trophy className="w-6 h-6" />
+            <MessageCircle className="w-6 h-6" /> {/* ALTERADO: Trophy para MessageCircle */}
             {heroContent.button2Text}
           </button>
         </div>
