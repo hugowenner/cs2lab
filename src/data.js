@@ -1,140 +1,160 @@
-// src/data.js
+import { Users, Book, Zap, Laugh, Trophy, Ghost, Skull, Aperture, MessageSquareText, ShieldCheck, Gamepad2, Heart, Target } from 'lucide-react';
+import { Award, Dices, Brain, Users as UsersIcon, Handshake, Shield, Sparkles, Calendar, TrendingUp, HandCoins, Gem } from 'lucide-react'; // Adicionei TrendinUp, HandCoins, Gem para mais opções
 
-import {
-  Menu, X, Users, Target, Trophy, MessageCircle, Calendar, Play, Star, Zap, Heart, Gamepad2
-} from 'lucide-react';
 
-// Navigation Links
 export const navItems = [
   { id: 'home', label: 'Início' },
-  { id: 'about', label: 'Sobre' },
+  { id: 'about', label: 'Sobre Nós' },
   { id: 'services', label: 'Serviços' },
   { id: 'legends', label: 'Lendas' },
-  { id: 'contact', label: 'Contato' }
+  { id: 'contact', label: 'Contato' },
 ];
 
-// Hero Section Content
 export const heroContent = {
-  title: 'CS 2 LAB',
-  subtitle: 'Onde a bala encontra a zoeira',
-  tagline: 'Mais que um time, uma gangue de amigos no CS2!',
-  description: 'Bem-vindo ao espaço virtual mais vibrante do Counter-Strike 2, onde a risada é a trilha sonora oficial e o "fake defuse" é considerado uma arte nobre.',
-  button1Text: 'Encontre Sua Turma',
-  button2Text: 'Vire Pro Player'
+  title: "иo.ƒear™ — Gaming Team",
+  subtitle: "Aqui não somos apenas um grupo. Somos um time. Somos mentalidade competitiva.",
+  tagline: "Somos иo.ƒear™ — onde a superação e o crescimento andam juntos.",
+  description: "Nosso foco principal é CS2 (Counter-Strike 2), mas acima de tudo, estamos aqui para formar jogadores focados, com espírito de equipe, disciplina e vontade de evoluir.",
+  button1Text: "Sobre Nós",
+  button2Text: "Nossos Serviços",
 };
 
-// About Section Content
 export const aboutSectionContent = {
-  title: 'Os Descomplicados',
-  subtitle: 'Somos uma família de gamers que acredita que a melhor forma de chegar ao topo é se divertindo juntos.',
+  title: "Quem Somos",
+  subtitle: "иo.ƒear™: Respeito, disciplina e sangue frio. Quem joga com medo, já perdeu.",
+  history: {
+    title: "Nossa Origem: O Legado de иo.ƒear™",
+    subtitle: "Forjada nas chamas da competição em **19 de Dezembro de 2011** 📅, carregamos uma essência inabalável: Força, Disciplina e Espírito de Equipe.",
+    foundersTitle: "⚔️ Arquitetos da Lenda: Membros Fundadores", // Melhorado
+    founders: [
+      "LorD (Fundador) 👑",
+      "Perna Peluda 🦊",
+      "BlackVibes ♠️",
+      "BANDIT_RJ 🔪",
+      "TufTuf malvadao 😈",
+      "Maop Bonham 🧠",
+      "Crals 🎯",
+      "Lorite 🛡️",
+      // Adicionei emojis para alguns membros, você pode personalizar mais
+    ],
+    motto: [ // Transformado em array para melhor estilização
+      "“Se o medo aparece, nós avançamos. 🚀",
+      "Se a pressão aumenta, nós permanecemos frios. ❄️",
+      "Se a derrota vem, nós aprendemos. 📈",
+      "Se a vitória chega, dividimos com o time.” 🏆"
+    ],
+    closing: [ // Transformado em array
+      "Aqui não existem estrelas isoladas. 🌌 Existem companheiros de equipe que confiam um no outro a cada round. 🤝",
+      "Bem-vindo ao иo.ƒear™. Agora você faz parte. Agora somos um só.  unity!", // Adicionei unity
+      "🟢 Respeite. 🟢 Aprenda. 🟢 Evolua. 🟢 Vença."
+    ]
+  },
   mission: {
-    title: 'Nossa Missão',
-    description: 'Desmistificar o CS 2, transformar jogadores em amigos e provar que é possível evoluir se divertindo. Aqui, cada sessão de treino é uma oportunidade de criar memórias e fortalecer laços.'
+    title: "Nossa Missão",
+    description: "Treinar. Evoluir. Vencer.\n\nConstruir um ambiente de treino, aprendizado e amizade.\n\nFormar jogadores com visão tática, comunicação clara e mentalidade vencedora.\n\nAqui o crescimento é coletivo: ninguém carrega sozinho — todos jogam pelo time.",
   },
   values: {
-    title: 'Nossos Valores',
-    items: ['Amizade', 'Diversão', 'Evolução', 'Zoeira']
+    title: "Regras de Conduta",
+    description: "\"Respeito gera confiança. Confiança gera vitória.\"\n\nиo.ƒear™ não é só um nome. É um compromisso.",
+    items: [
+      { icon: Handshake, label: "Respeito Total", description: "Com todos os membros." },
+      { icon: Shield, label: "Tolerância Zero", description: "Não toleramos ofensas, rage, desânimo ou comportamento tóxico." },
+      { icon: Brain, label: "Foco no Desenvolvimento", description: "Individual e coletivo." },
+      { icon: Award, label: "Compromisso", description: "Com o jogo, com a equipe e com a evolução." },
+      { icon: Sparkles, label: "Sem Ego", description: "Aqui não existe espaço para ego, toxicidade ou desânimo." },
+    ],
   },
-  philosophy: {
-    title: 'A Evolução Vem da Diversão',
-    description: 'Acreditamos que as melhores estratégias surgem entre piadas internas e que cada "fake defuse" é uma oportunidade de criar uma história épica.',
-    tag: 'Zoeira Responsável ✨'
-  }
 };
 
-// Services Section Content
 export const servicesContent = {
-  title: 'O Que Oferecemos',
-  subtitle: 'Tudo o que você precisa para se divertir e evoluir no CS2',
+  title: "O Que Oferecemos",
+  subtitle: "Tudo o que você precisa para se tornar um jogador de alto nível no иo.ƒear™:",
   items: [
     {
-      icon: Target,
-      title: "Sessões de Treino",
-      description: "Treinamentos lendários com análise de replays e discussões táticas regadas a muita diversão.",
-      color: "orange"
+      icon: Book,
+      color: "blue-electric",
+      title: "Treinos Estratégicos Avançados",
+      description: "Sessões estruturadas para refinar táticas, execuções e análise de jogadas, focando na mentalidade de vitória."
     },
     {
-      icon: Play,
-      title: "Análise de Gameplay",
-      description: "Revisões divertidas dos seus melhores (e piores) momentos no jogo, sempre com muito humor.",
-      color: "red"
+      icon: MessageSquareText,
+      color: "blue-electric",
+      title: "Análise de Gameplay Detalhada",
+      description: "Feedback técnico e construtivo focado em posicionamento, mira e decisões críticas sob pressão."
     },
     {
-      icon: Users,
-      title: "Times para Ranked",
-      description: "Encontre sua galera ideal para subir de patente e criar memórias inesquecíveis.",
-      color: "yellow"
+      icon: UsersIcon,
+      color: "blue-electric",
+      title: "Equipes Competitivas",
+      description: "Formamos squads para subir de patente, priorizando entrosamento, comunicação e disciplina tática."
     },
     {
       icon: Trophy,
-      title: "Campeonatos",
-      description: "Participe de torneios internos onde a zoeira é garantida, independente do resultado.",
-      color: "orange"
+      color: "blue-electric",
+      title: "Campeonatos Internos",
+      description: "Competições que simulam o ambiente profissional, equilibrando a disputa feroz com o espírito de equipe."
     },
     {
-      icon: MessageCircle,
-      title: "Discord Vibrante",
-      description: "Um servidor cheio de vida, onde a conversa rola solta 24/7 e todos são bem-vindos.",
-      color: "red"
+      icon: MessageSquareText,
+      color: "blue-electric",
+      title: "Comunidade Ativa no Discord",
+      description: "Nosso servidor vibrante para discussões táticas, organização de treinos e integração constante entre os membros focados."
     },
     {
-      icon: Calendar,
-      title: "Eventos",
-      description: "Encontros online e presenciais para fortalecer os laços da nossa família gamer.",
-      color: "yellow"
-    }
-  ]
+      icon: Gamepad2,
+      color: "blue-electric",
+      title: "Eventos Exclusivos",
+      description: "Além das partidas, criamos momentos para fortalecer conexões reais e celebrar nossa paixão pelo game."
+    },
+  ],
 };
 
-// Legends Section Content
 export const legendsContent = {
-  title: 'Lendas do CS 2 Lab',
-  subtitle: 'Histórias épicas que definem nossa comunidade',
+  title: "Nossas Lendas em Campo",
+  subtitle: "Histórias de momentos épicos e jogadas que marcaram nossa comunidade e reforçaram nossa mentalidade competitiva.",
   items: [
     {
-      title: "A Lenda do \"Fake Defuse\" que Virou Amizade",
-      icon: Heart,
-      description: "Era uma partida tensa, bomba plantada, último round. Um jogador tentou um 'fake defuse' épico, mas acabou sendo pego no flagra. Em vez de rage, o time inteiro caiu na gargalhada. Aquela risada coletiva transformou rivais em amigos e criou uma das amizades mais duradouras da nossa comunidade.",
-      color: "from-pink-500 to-red-500"
+      icon: Ghost,
+      color: "blue-electric",
+      title: "O Eco do Último Defuse",
+      description: "Em um round decisivo no Inferno, um fake defuse executado com precisão silenciou o adversário. O som do kit sendo ativado e desativado ecoa como um lembrete da inteligência tática necessária para dominar o campo de batalha."
     },
     {
-      title: "A Saga do Primeiro \"Clutch\" de Galinha",
-      icon: Star,
-      description: "Situação: 1v4, sem kit, bomba prestes a explodir. Nosso herói estava perdido quando uma galinha apareceu na tela. Seguindo os 'conselhos estratégicos' da galinha (que na verdade eram gritos do Discord), ele conseguiu o clutch mais improvável da história. Desde então, galinhas são consideradas coaches honorários.",
-      color: "from-yellow-500 to-orange-500"
+      icon: Skull,
+      color: "blue-electric",
+      title: "A Maestria do Clutch Improvável",
+      description: "Em um 1v4 na Vertigo, nosso capitão orquestrou um clutch que desafiou todas as probabilidades. Essa virada, nascida da resiliência e calma sob pressão, é revisitada como exemplo de como a mente estratégica pode superar a desvantagem numérica."
     },
     {
-      title: "A Origem do \"Treino do Esquilo\"",
-      description: "Tudo começou com uma ideia maluca: 'E se treinássemos mira atirando em esquilos virtuais super rápidos?' O que era para ser um treino sério virou uma sessão de gargalhadas épicas. O 'Treino do Esquilo' se tornou tradição, prova de que as melhores ideias nascem da espontaneidade e do humor.",
-      icon: Target,
-      color: "from-green-500 to-teal-500"
-    }
+      icon: Aperture,
+      color: "blue-electric",
+      title: "A Rotação Perfeita",
+      description: "Durante um confronto tenso, uma rotação sincronizada da equipe pelo mid no Miragem pegou a defesa inimiga de surpresa. A execução impecável, com smokes e flashes no tempo certo, resultou em uma entrada explosiva e um round garantido. Um testemunho da nossa dedicação à coordenação de equipe."
+    },
   ]
 };
 
-// Contact Section Content
 export const contactContent = {
-  title: 'Junte-se à Família',
-  subtitle: 'Pronto para fazer parte da nossa gangue de amigos? Vamos escrever juntos as próximas lendas!',
+  title: "Faça Parte da иo.ƒear™",
+  subtitle: "Pronto para elevar seu jogo e integrar um time de verdade?",
   discord: {
-    title: 'Discord',
-    description: 'Entre no nosso servidor e faça parte da conversa que nunca para!',
-    buttonText: 'Entrar no Discord'
+    title: "Entre no Discord",
+    description: "Junte-se à nossa comunidade para treinos, discussões táticas e integração com a equipe.",
+    buttonText: "Entrar no Discord",
   },
   steam: {
-    title: 'Steam Group',
-    description: 'Adicione-se ao nosso grupo e receba convites para partidas épicas!',
-    buttonText: 'Ver Grupo Steam'
+    title: "Nosso Grupo Steam",
+    description: "Conecte-se conosco no Steam, organize partidas e receba convites para eventos exclusivos.",
+    buttonText: "Ver Grupo Steam",
   },
   quote: {
-    text: 'A história da nossa comunidade continua sendo escrita em cada bala perdida, momento de zoeira e nova amizade.',
-    tagline: 'Seja parte dessa história! 🎮✨'
-  }
+    text: "Na иo.ƒear™, cada vitória, cada derrota e cada desafio são degraus para a excelência.",
+    tagline: "иo.ƒear™ — Gaming Team: Onde o medo vira força desde 2011.",
+  },
 };
 
-// Footer Content
 export const footerContent = {
-  title: 'CS 2 LAB',
-  subtitle: 'Onde a bala encontra a zoeira desde 2024',
-  description: 'Feito com ❤️ e muita zoeira pelos Descomplicados'
+  title: "иo.ƒear™ Gaming Team",
+  subtitle: "Onde a superação e o crescimento andam juntos.",
+  description: "Fundado em 19 de Dezembro de 2011. Desenvolvido com paixão e estratégia.",
 };

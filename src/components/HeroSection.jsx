@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, Trophy } from 'lucide-react';
-import { heroContent } from '../data';
+import { heroContent } from '../data'; // Certifique-se de que o data.js tem o conteúdo atualizado
 
 const HeroSection = ({ scrollToSection }) => {
   return (
@@ -10,7 +10,7 @@ const HeroSection = ({ scrollToSection }) => {
         autoPlay
         loop
         muted
-        playsInline // Importante para reprodução automática em dispositivos móveis
+        playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
         <source src="/videos/VIDEOCS.mp4" type="video/mp4" />
@@ -18,48 +18,48 @@ const HeroSection = ({ scrollToSection }) => {
       </video>
 
       {/* Overlay para escurecer o vídeo e melhorar a legibilidade do texto */}
-      <div className="absolute inset-0 bg-gray-900 opacity-70 z-10"></div> {/* Ajuste a opacidade conforme necessário */}
-      
+      <div className="absolute inset-0 bg-gray-950 opacity-80 z-10"></div> {/* Aumentei a opacidade para 80% e cinza mais escuro */}
+
       {/* Animação de background existente, ajuste z-index para ficar acima do vídeo e abaixo do conteúdo */}
-      <div className="absolute inset-0 opacity-10 z-20"> {/* Ajustado para z-20 */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-red-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-500 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className="absolute inset-0 opacity-15 z-20"> {/* Aumentei a opacidade da animação para 15% */}
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-blue-electric-500 rounded-full blur-3xl animate-blob-pulse-slow"></div> {/* Animação mais suave */}
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-electric-700 rounded-full blur-3xl animate-blob-pulse-slow delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-electric-600 rounded-full blur-3xl animate-blob-pulse-slow delay-500"></div>
       </div>
-      
+
       {/* Conteúdo da Seção Hero - z-index mais alto para ficar visível */}
-      <div className="relative z-30 text-center max-w-4xl mx-auto px-4"> {/* Ajustado para z-30 */}
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-red-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+      <div className="relative z-30 text-center max-w-5xl mx-auto px-4">
+        <div className="mb-8" data-aos="fade-down" data-aos-duration="1000">
+          <h1 className="text-6xl md:text-8xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-blue-electric-400 via-blue-electric-600 to-blue-electric-500 bg-clip-text text-transparent animate-text-gradient"> {/* Aumentei tamanho e adicionei animação de gradiente de texto */}
             {heroContent.title}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-2">
+          <p className="text-xl md:text-3xl text-gray-200 font-light mb-3 mt-4 tracking-wide" data-aos="fade-down" data-aos-delay="200">
             {heroContent.subtitle}
           </p>
-          <p className="text-lg md:text-xl text-orange-400 font-semibold">
+          <p className="text-lg md:text-2xl text-blue-electric-300 font-semibold uppercase tracking-widest" data-aos="fade-down" data-aos-delay="400">
             {heroContent.tagline}
           </p>
         </div>
-        
-        <div className="space-y-4 mb-8">
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+
+        <div className="space-y-4 mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {heroContent.description}
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button 
+        <div className="flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+          <button
             onClick={() => scrollToSection('about')}
-            className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-blue-electric-500 to-blue-electric-700 hover:from-blue-electric-600 hover:to-blue-electric-800 px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl text-white flex items-center justify-center gap-2"
           >
-            <Users className="inline-block w-5 h-5 mr-2" />
+            <Users className="w-6 h-6" />
             {heroContent.button1Text}
           </button>
-          <button 
-            onClick={() => scrollToSection('services')}
-            className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+          <button
+            onClick={() => window.open('https://discord.gg/HGWT47n5ww', '_blank')}
+            className="border-2 border-blue-electric-500 text-blue-electric-400 hover:bg-blue-electric-500 hover:text-white px-10 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
           >
-            <Trophy className="inline-block w-5 h-5 mr-2" />
+            <Trophy className="w-6 h-6" />
             {heroContent.button2Text}
           </button>
         </div>

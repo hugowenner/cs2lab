@@ -7,8 +7,10 @@ import LegendsSection from './components/LegendsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import { navItems } from './data'; // Import navItems for scroll logic
+import HistorySection from './components/HistorySection'; // Certifique-se de importar HistorySection se ainda não estiver
 
-const CS2LabWebsite = () => {
+
+const App = () => { // Renomeado de CS2LabWebsite para App
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -55,6 +57,9 @@ const CS2LabWebsite = () => {
       
       <HeroSection scrollToSection={scrollToSection} />
       <AboutSection />
+      {/* O componente HistorySection já está sendo usado dentro de AboutSection,
+          então não precisamos importá-lo diretamente aqui, a menos que você
+          queira movê-lo para fora de AboutSection. No momento, ele está correto. */}
       <ServicesSection />
       <LegendsSection />
       <ContactSection />
@@ -63,4 +68,4 @@ const CS2LabWebsite = () => {
   );
 };
 
-export default CS2LabWebsite;
+export default App; // Renomeado de CS2LabWebsite para App
