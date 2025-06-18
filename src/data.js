@@ -1,7 +1,204 @@
-import { Users, Book, Zap, Laugh, Trophy, Ghost, Skull, Aperture, MessageSquareText, ShieldCheck, Gamepad2, Heart, Target } from 'lucide-react';
-import { Award, Dices, Brain, Users as UsersIcon, Handshake, Shield, Sparkles, Calendar, TrendingUp, HandCoins, Gem } from 'lucide-react'; // Adicionei TrendinUp, HandCoins, Gem para mais opções
+// src/data.js (ou o caminho correto para o seu arquivo de dados)
+
+// Importações de ícones para as seções (ajuste conforme o que você realmente usa)
+import {
+  Heart,
+  Handshake,
+  Sparkles,
+  Brain,
+  Shield,
+  SmilePlus,
+  Award,
+  MessageCircle,
+  Users,
+  Trophy,
+  Calendar,
+  ShieldCheck,
+  TrendingUp,
+  Crown, // Adicionado para as lendas
+  Dribbble, // Adicionado para as lendas
+  Skull, // Adicionado para as lendas
+  BookOpen,
+  MapPin,
+  Swords,
+  UsersRound,
+  Gamepad2,
+  BellRing,
+  Megaphone,
+  BookA,
+  Gavel,
+  Scale,
+  Smile,
+  Zap,
+  Star,
+  Target,
+  Trophy as TrophyIcon // Renomeado para evitar conflito com Trophy do HeroSection
+} from 'lucide-react';
+
+// Conteúdo da Seção Hero
+export const heroContent = {
+  title: "иo.ƒear™",
+  subtitle: "Sua jornada no CS2 começa aqui!",
+  tagline: "Comunidade, Estratégia e Vitórias",
+  description: "Bem-vindo à иo.ƒear™ Gaming Team, o lar de jogadores apaixonados por Counter-Strike 2. Somos uma comunidade vibrante dedicada a aprimorar o jogo em equipe, desenvolver estratégias inovadoras e, acima de tudo, celebrar a paixão que nos une. Junte-se a nós para experiências de jogo inesquecíveis e amizades duradouras.",
+  button1Text: "Sobre Nós",
+  button2Text: "Entrar no Discord",
+};
+
+// Conteúdo da Seção About (e subseções História e Regras de Conduta/Valores)
+export const aboutSectionContent = {
+  title: "Sobre Nós",
+  subtitle: "Nossa história, nossos valores e o que nos torna únicos.",
+
+  history: {
+    title: "Nossa História",
+    description: "A иo.ƒear™ Gaming Team nasceu da paixão compartilhada por Counter-Strike 2 e da visão de criar um espaço onde jogadores pudessem se reunir, competir e crescer juntos. Fundada em [MÊS/ANO DE FUNDAÇÃO - ex: Junho de 2023], começamos como um pequeno grupo de amigos, mas rapidamente crescemos, atraindo indivíduos dedicados que compartilham nossos valores de respeito, trabalho em equipe e busca pela excelência.\n\nDesde então, nossa jornada tem sido marcada por inúmeras vitórias, momentos de aprendizado e, acima de tudo, o fortalecimento de laços que vão além do jogo. Nosso objetivo é fomentar um ambiente competitivo e saudável, onde cada membro se sinta valorizado e parte de algo maior.",
+    foundersTitle: "Nossos Fundadores",
+    founders: [
+      "LorD",
+      "MaopBonham",
+      "Perna Peluda",
+      "Tuf Tuf Malvadão",
+    ],
+    motto: "“Em cada round, uma nova chance de provar nossa força e união.”",
+    communityMotto: [
+      "Uma comunidade forte é construída com base no respeito mútuo e na paixão compartilhada.",
+      "Acreditamos que, com dedicação e trabalho em equipe, podemos alcançar qualquer objetivo dentro e fora do jogo.",
+    ],
+  },
+
+  values: {
+    title: "Nossos Valores",
+    description: "Nossos valores são o alicerce da иo.ƒear™ Gaming Team, guiando cada interação e decisão para garantir um ambiente positivo e produtivo para todos. Eles representam o que somos e o que aspiramos ser.",
+    items: [
+      {
+        icon: Handshake,
+        label: "Respeito",
+        description: "Tratar todos os membros, adversários e a comunidade com dignidade e cortesia, reconhecendo a diversidade de opiniões e estilos de jogo.",
+      },
+      {
+        icon: Users,
+        label: "Trabalho em Equipe",
+        description: "Colaborar ativamente, apoiar uns aos outros e priorizar os objetivos coletivos acima dos individuais para alcançar o sucesso mútuo.",
+      },
+      {
+        icon: TrophyIcon, // Usando TrophyIcon para evitar conflito
+        label: "Excelência",
+        description: "Buscar constantemente a melhoria em todas as áreas, desde a habilidade no jogo até a comunicação e a conduta ética.",
+      },
+      {
+        icon: Brain,
+        label: "Estratégia",
+        description: "Desenvolver e aplicar táticas inteligentes e adaptáveis, pensando coletivamente para superar desafios e dominar o campo de batalha.",
+      },
+      {
+        icon: ShieldCheck,
+        label: "Integridade",
+        description: "Agir com honestidade e transparência em todas as situações, mantendo a lealdade à equipe e aos princípios da comunidade.",
+      },
+      {
+        icon: Award,
+        label: "Paixão",
+        description: "Manter o entusiasmo e o amor pelo Counter-Strike 2 e pela nossa comunidade, cultivando um ambiente de diversão e dedicação contínua.",
+      },
+    ],
+  },
+};
+
+// Conteúdo da Seção Serviços
+export const servicesContent = {
+  title: "O Que Oferecemos",
+  subtitle: "Experiências e recursos que impulsionam seu jogo e sua conexão.",
+  items: [
+    {
+      icon: Swords,
+      title: "Partidas Ranqueadas & Scrims",
+      description: "Organizamos partidas competitivas e treinos estratégicos para aprimorar suas habilidades e a coesão da equipe.",
+    },
+    {
+      icon: UsersRound,
+      title: "Comunidade Ativa no Discord",
+      description: "Um servidor Discord vibrante para comunicação, formação de grupos e interação com outros membros.",
+    },
+    {
+      icon: Gamepad2,
+      title: "Treinamentos e Análises",
+      description: "Sessões dedicadas para revisar jogadas, discutir estratégias e evoluir individualmente e em equipe.",
+    },
+    {
+      icon: BellRing,
+      title: "Eventos e Torneios Internos",
+      description: "Competições amigáveis dentro da comunidade para testar habilidades e promover a diversão.",
+    },
+    {
+      icon: Megaphone,
+      title: "Suporte e Mentoria",
+      description: "Membros experientes estão disponíveis para oferecer dicas, conselhos e suporte para novos jogadores.",
+    },
+    {
+      icon: BookA,
+      title: "Biblioteca de Recursos",
+      description: "Acesso a guias, tutoriais e vídeos para ajudar no aprendizado de mapas, armas e táticas.",
+    },
+  ],
+};
 
 
+// Conteúdo da Seção Lendas
+export const legendsContent = {
+  title: "Lendas da Comunidade",
+  subtitle: "Aqueles que moldaram nossa história e continuam a nos inspirar.",
+  items: [
+    {
+      title: "LorD",
+      description: "Conhecido por sua estratégia impecável e liderança nata, LorD é o estrategista-mor da nossa comunidade. Suas táticas são lendárias, transformando derrotas iminentes em vitórias gloriosas. Além de seu intelecto afiado, LorD é admirado por sua paciência e disposição em guiar novos jogadores, tornando-se um verdadeiro mentor para muitos.",
+      icon: Crown,
+    },
+    {
+      title: "MaopBonham",
+      description: "O coração pulsante da nossa comunidade, MaopBonham é a personificação da energia e do bom humor. Seja com suas piadas contagiosas ou com seu espírito incansável, ele tem o dom de levantar o astral de qualquer um. MaopBonham é a cola que une a todos, garantindo que o espírito de camaradagem nunca se apague.",
+      icon: Dribbble,
+    },
+    {
+      title: "Perna Peluda",
+      description: "Com uma habilidade que desafia a lógica e um estilo de jogo imprevisível, Perna Peluda é a surpresa constante. Seus movimentos audaciosos e sua capacidade de virar o jogo em momentos críticos o transformaram em uma figura lendária. Perna Peluda inspira a todos a ousar e a nunca subestimar o poder da criatividade.",
+      icon: Brain,
+    },
+    {
+      title: "Tuf Tuf Malvadão",
+      description: "O nome pode soar intimidador, mas Tuf Tuf Malvadão é a personificação da resiliência e da determinação. Conhecido por sua persistência inabalável, ele nunca desiste, não importa o desafio. Tuf Tuf Malvadão é a prova de que a dedicação e o treino constante levam à maestria, inspirando todos a superar seus próprios limites.",
+      icon: Skull,
+    },
+  ],
+};
+
+
+// Conteúdo da Seção Contato
+export const contactContent = {
+  title: "Junte-se a Nós",
+  subtitle: "Pronto para fazer parte da nossa família иo.ƒear™? Conecte-se conosco!",
+  discord: {
+    title: "Nosso Servidor Discord",
+    description: "Onde a ação acontece! Converse com a equipe, encontre parceiros para jogar e fique por dentro das últimas novidades.",
+    buttonText: "Entrar no Discord",
+  },
+  // Removido o bloco steam
+  quote: {
+    text: "A verdadeira força de um time não está apenas nas vitórias, mas na jornada que compartilhamos juntos.",
+    tagline: "- Equipe иo.ƒear™",
+  },
+};
+
+// Conteúdo do Rodapé
+export const footerContent = {
+  subtitle: "Sua comunidade de Counter-Strike 2.",
+  // Ajustado para um objeto para melhor organização
+  copyright: "© {year} иo.ƒear™ Gaming Team. Todos os direitos reservados.",
+  developerInfo: "Desenvolvido por Hugo Wenner - hugowenne5@gmail.com",
+};
+
+
+// Itens de navegação para o NavBar
 export const navItems = [
   { id: 'home', label: 'Início' },
   { id: 'about', label: 'Sobre Nós' },
@@ -9,149 +206,3 @@ export const navItems = [
   { id: 'legends', label: 'Lendas' },
   { id: 'contact', label: 'Contato' },
 ];
-
-export const heroContent = {
-  title: "иo.ƒear™ — Gaming Team",
-  subtitle: "Aqui não somos apenas um grupo. Somos um time. Somos mentalidade competitiva.",
-  tagline: "Somos иo.ƒear™ — onde a superação e o crescimento andam juntos.",
-  description: "Nosso foco principal é CS2 (Counter-Strike 2), mas acima de tudo, estamos aqui para formar jogadores focados, com espírito de equipe, disciplina e vontade de evoluir.",
-  button1Text: "Sobre Nós",
-  button2Text: "Nossos Serviços",
-};
-
-// ... outras importações e conteúdos
-
-export const aboutSectionContent = {
-      title: "Sobre Nós",
-      subtitle: "Conheça a história e os valores que nos movem.",
-      history: {
-        title: "Nossa Origem: Forjados na Amizade e na Batalha 🎮",
-        description: `A иo.ƒear™ Gaming Team surgiu em 19 de Dezembro de 2011, com raízes fincadas em Belo Horizonte, mas com a alma conectada às comunidades de São Paulo e Rio de Janeiro. Com mais de ${new Date().getFullYear() - 2011} anos de história, mais do que um time, somos uma comunidade de amigos, unidos pela paixão por jogos e pela competição.
-
-    Nossa essência é construída sobre Força, Disciplina e Espírito de Equipe. Desde o início, nosso objetivo sempre foi criar um ambiente onde o crescimento é coletivo e a amizade é o pilar de cada vitória.`,
-        foundersTitle: "Arquitetos da Nossa História 👑",
-        founders: [
-          "LorD",
-          "Perna Peluda",
-          "BlackVibes",
-          "BANDIT_RJ",
-          "TufTuf malvadao",
-          "Maop Bonham",
-          "Crals",
-          "Lorite",
-        ],
-        motto: "Se o medo aparece, nós avançamos. Se a pressão aumenta, nós permanecemos frios. Se a derrota vem, nós aprendemos. Se a vitória chega, dividimos com o time. 🏆",
-        // ... restante do content
-        communityMotto: [
-          "Aqui na иo.ƒear™, não existem estrelas isoladas, mas sim companheiros de equipe que confiam um no outro a cada round. Promovemos um espaço de treino e aprendizado contínuo, onde o respeito, a dedicação e a evolução são valores essenciais.",
-          "Seja bem-vindo à иo.ƒear™. Agora você faz parte. Agora somos um só.",
-        ],
-      },
-      // ... restante do aboutSectionContent
-
-  values: {
-    title: "Regras de Conduta", // Este título pode não ser mais visível, mas os itens podem ser úteis para um novo propósito
-    description: "Nossos princípios que guiam cada membro do time.",
-    items: [
-      { label: "Comunicação Clara", description: "Fale de forma objetiva e construtiva, dentro e fora do jogo.", icon: Handshake },
-      { label: "Respeito Mútuo", description: "Trate a todos com dignidade, independentemente de habilidade ou experiência.", icon: Heart },
-      { label: "Atitude Positiva", description: "Mantenha a calma e o foco, mesmo sob pressão.", icon: Sparkles },
-      { label: "Foco na Evolução", description: "Busque sempre aprender e melhorar, individualmente e em equipe.", icon: Brain },
-      { label: "Fair Play", description: "Jogue limpo e honre o espírito esportivo.", icon: Shield },
-      { label: "Comprometimento", description: "Dedique-se aos treinos e aos objetivos do time.", icon: Award },
-    ],
-  },
-};
-
-export const servicesContent = {
-  title: "O Que Oferecemos",
-  subtitle: "Tudo o que você precisa para se tornar um jogador de alto nível no иo.ƒear™:",
-  items: [
-    {
-      icon: Book,
-      color: "blue-electric",
-      title: "Treinos Estratégicos Avançados",
-      description: "Sessões estruturadas para refinar táticas, execuções e análise de jogadas, focando na mentalidade de vitória."
-    },
-    {
-      icon: MessageSquareText,
-      color: "blue-electric",
-      title: "Análise de Gameplay Detalhada",
-      description: "Feedback técnico e construtivo focado em posicionamento, mira e decisões críticas sob pressão."
-    },
-    {
-      icon: UsersIcon,
-      color: "blue-electric",
-      title: "Equipes Competitivas",
-      description: "Formamos squads para subir de patente, priorizando entrosamento, comunicação e disciplina tática."
-    },
-    {
-      icon: Trophy,
-      color: "blue-electric",
-      title: "Campeonatos Internos",
-      description: "Competições que simulam o ambiente profissional, equilibrando a disputa feroz com o espírito de equipe."
-    },
-    {
-      icon: MessageSquareText,
-      color: "blue-electric",
-      title: "Comunidade Ativa no Discord",
-      description: "Nosso servidor vibrante para discussões táticas, organização de treinos e integração constante entre os membros focados."
-    },
-    {
-      icon: Gamepad2,
-      color: "blue-electric",
-      title: "Eventos Exclusivos",
-      description: "Além das partidas, criamos momentos para fortalecer conexões reais e celebrar nossa paixão pelo game."
-    },
-  ],
-};
-
-export const legendsContent = {
-  title: "Nossas Lendas em Campo",
-  subtitle: "Histórias de momentos épicos e jogadas que marcaram nossa comunidade e reforçaram nossa mentalidade competitiva.",
-  items: [
-    {
-      icon: Ghost,
-      color: "blue-electric",
-      title: "O Eco do Último Defuse",
-      description: "Em um round decisivo no Inferno, um fake defuse executado com precisão silenciou o adversário. O som do kit sendo ativado e desativado ecoa como um lembrete da inteligência tática necessária para dominar o campo de batalha."
-    },
-    {
-      icon: Skull,
-      color: "blue-electric",
-      title: "A Maestria do Clutch Improvável",
-      description: "Em um 1v4 na Vertigo, nosso capitão orquestrou um clutch que desafiou todas as probabilidades. Essa virada, nascida da resiliência e calma sob pressão, é revisitada como exemplo de como a mente estratégica pode superar a desvantagem numérica."
-    },
-    {
-      icon: Aperture,
-      color: "blue-electric",
-      title: "A Rotação Perfeita",
-      description: "Durante um confronto tenso, uma rotação sincronizada da equipe pelo mid no Miragem pegou a defesa inimiga de surpresa. A execução impecável, com smokes e flashes no tempo certo, resultou em uma entrada explosiva e um round garantido. Um testemunho da nossa dedicação à coordenação de equipe."
-    },
-  ]
-};
-
-export const contactContent = {
-  title: "Faça Parte da иo.ƒear™",
-  subtitle: "Pronto para elevar seu jogo e integrar um time de verdade?",
-  discord: {
-    title: "Entre no Discord",
-    description: "Junte-se à nossa comunidade para treinos, discussões táticas e integração com a equipe.",
-    buttonText: "Entrar no Discord",
-  },
-  steam: {
-    title: "Nosso Grupo Steam",
-    description: "Conecte-se conosco no Steam, organize partidas e receba convites para eventos exclusivos.",
-    buttonText: "Ver Grupo Steam",
-  },
-  quote: {
-    text: "Na иo.ƒear™, cada vitória, cada derrota e cada desafio são degraus para a excelência.",
-    tagline: "иo.ƒear™ — Gaming Team: Onde o medo vira força desde 2011.",
-  },
-};
-
-export const footerContent = {
-  title: "иo.ƒear™ Gaming Team",
-  subtitle: "Onde a superação e o crescimento andam juntos.",
-  description: "Fundado em 19 de Dezembro de 2011. Desenvolvido com paixão e estratégia.",
-};
