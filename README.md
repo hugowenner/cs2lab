@@ -1,89 +1,49 @@
-# Portfólio Pessoal - Hugo Wenner
+иo.ƒear™ Gaming Team
+Bem-vindo ao repositório oficial do time de Counter-Strike 2, иo.ƒear™ Gaming Team!
 
-Bem-vindo ao meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e experiências profissionais no campo da tecnologia.
+Este projeto é o site oficial do nosso time, onde você pode encontrar informações sobre nossa história, missão (anteriormente presente), valores, serviços, lendas e como entrar em contato conosco.
 
-## Visão Geral do Projeto
+Visão Geral
+O site foi desenvolvido em React e utiliza Tailwind CSS para estilização, proporcionando uma experiência moderna e responsiva. A aplicação é organizada em componentes modulares para facilitar a manutenção e escalabilidade.
 
-Este site é uma Single Page Application (SPA) moderna e responsiva, construída com foco em performance e experiência do usuário. Ele serve como um currículo interativo e uma vitrine para meus trabalhos.
+Seções Principais
+Início (Hero Section): Apresenta uma introdução dinâmica ao time com um vídeo de fundo, título, subtítulo e chamadas para ação para conhecer mais sobre o time ou entrar em contato.
+Sobre Nós (About Section): Detalha a história do time, seus fundadores, e as regras de conduta que guiam nossos membros.
+Lendas (Legends Section): Perfil dos jogadores lendários do time, com descrições detalhadas e a opção de "Ler Mais" para descrições longas.
+Serviços (Services Section): Lista os serviços ou aspectos da comunidade que o time oferece.
+Contato (Contact Section): Fornece informações sobre como entrar em contato com o time, incluindo links para o Discord e Steam, e uma citação inspiradora.
+Rodapé (Footer): Contém informações de copyright e a marca do time.
+Características Técnicas
+React: Biblioteca JavaScript para construção de interfaces de usuário.
+Tailwind CSS: Framework CSS utilitário para estilização rápida e responsiva.
+Lucide React: Biblioteca de ícones para React.
+react-scroll (assumido): Para navegação suave entre as seções.
+AOS (Animate On Scroll): Para animações de elementos ao rolar a página.
+Vídeo de Fundo: A Hero Section inclui um vídeo de fundo para uma experiência imersiva.
+Logo e Favicon: O site utiliza o logo "иo.ƒear" e um favicon personalizado para identidade visual.
+Como Executar o Projeto Localmente
+Para rodar este projeto em seu ambiente de desenvolvimento, siga os passos abaixo:
 
-## Tecnologias Utilizadas
+Pré-requisitos: Certifique-se de ter o Node.js e o npm (ou Yarn) instalados em sua máquina.
+Clone o Repositório:
+Bash
 
-* **React:** Biblioteca JavaScript para construção da interface de usuário.
-* **Vite:** Ferramenta de build rápido para desenvolvimento front-end.
-* **Tailwind CSS:** Framework CSS utilitário para design responsivo e estilização rápida.
-* **Lucide React:** Biblioteca de ícones (SVG) para React.
+git clone <URL_DO_SEU_REPOSITORIO>
+cd <nome-da-pasta-do-seu-projeto>
+Instale as Dependências:
+Bash
 
-## Estrutura do Projeto
-
-O projeto segue uma estrutura modular, com componentes React separados para cada seção principal do portfólio.
-
-hugo-portfolio/
-├── public/                 # Arquivos estáticos (ex: index.html, sua foto hugo.jpg)
-├── src/
-│   ├── assets/             # Mídias diversas (imagens, como hugo.jpg)
-│   ├── components/         # Componentes React reutilizáveis para cada seção
-│   │   ├── AboutSection.jsx
-│   │   ├── EducationCertificationsSection.jsx
-│   │   ├── ExperienceSection.jsx
-│   │   ├── FooterSection.jsx
-│   │   ├── GithubSection.jsx
-│   │   ├── HeroSection.jsx
-│   │   ├── Navbar.jsx
-│   │   └── SkillsSection.jsx
-│   ├── data.js             # Dados estáticos do portfólio (certificações, skills, experiências, etc.)
-│   ├── App.jsx             # Componente principal que orquestra as seções
-│   └── main.jsx            # Ponto de entrada da aplicação
-├── package.json            # Dependências e scripts do projeto
-├── README.md               # Este arquivo de documentação
-└── vite.config.js          # Configuração do Vite
-
-## Como Rodar o Projeto Localmente
-
-Siga os passos abaixo para configurar e rodar o projeto em sua máquina local.
-
-### Pré-requisitos
-
-Certifique-se de ter o Node.js e o npm (Node Package Manager) ou Yarn instalados.
-
-* [Node.js](https://nodejs.org/) (inclui npm)
-
-### Instalação
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO_GITHUB/SEU_REPOSITORIO.git)
-    cd SEU_REPOSITORIO
-    ```
-    *Substitua `SEU_USUARIO_GITHUB` e `SEU_REPOSITORIO` pelos seus dados.*
-
-2.  **Instale as dependências:**
-    ```bash
-    npm install
-    # ou
-    yarn install
-    ```
-
-### Executando a Aplicação
-
-Para iniciar o servidor de desenvolvimento:
-
-```bash
-npm run dev
+npm install
 # ou
-yarn dev
+yarn install
+Inicie o Servidor de Desenvolvimento:
+Bash
 
-Contato
-Email: hugowenner5@gmail.com
-LinkedIn: Seu Perfil do LinkedIn
-GitHub: Meu Perfil do GitHub
-Telefone/WhatsApp: (31) 97183-6063
+npm start
+# ou
+yarn start
+Isso abrirá a aplicação no seu navegador padrão, geralmente em http://localhost:3000.
+Contribuição
+Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar bugs, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-Desenvolvido com ❤️ por Hugo Wenner
-
-
-**Lembre-se de personalizar os seguintes pontos neste `README.md`:**
-
-* **`SEU_USUARIO_GITHUB` e `SEU_REPOSITORIO`**: Substitua pelos seus dados reais na seção "Instalação".
-* **`URL_DO_SEU_LINKEDIN`**: Preencha com o link direto para o seu perfil no LinkedIn na seção "Contato".
-
-Com este `README.md`, seu projeto estará bem documentado para você e para qualquer outra pes
+© 2025 иo.ƒear™ Gaming Team. Todos os direitos reservados.
