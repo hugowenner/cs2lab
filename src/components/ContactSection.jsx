@@ -10,7 +10,8 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-electric-400 to-blue-electric-600 bg-clip-text text-transparent">
             {contactContent.title}
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          {/* Subtítulo: de text-gray-300 para text-white */}
+          <p className="text-xl text-white mb-8">
             {contactContent.subtitle}
           </p>
         </div>
@@ -20,7 +21,8 @@ const ContactSection = () => {
             <div className="text-center">
               <MessageCircle className="w-12 h-12 text-blue-electric-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4 text-blue-electric-400">{contactContent.discord.title}</h3>
-              <p className="text-gray-300 mb-4">
+              {/* Descrição Discord: de text-gray-300 para text-white */}
+              <p className="text-white mb-4">
                 {contactContent.discord.description}
               </p>
               <a
@@ -35,7 +37,8 @@ const ContactSection = () => {
             <div className="text-center">
               <Users className="w-12 h-12 text-blue-electric-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4 text-blue-electric-400">{contactContent.steam.title}</h3>
-              <p className="text-gray-300 mb-4">
+              {/* Descrição Steam: de text-gray-300 para text-white */}
+              <p className="text-white mb-4">
                 {contactContent.steam.description}
               </p>
               <button className="bg-gradient-to-r from-blue-electric-500 to-blue-electric-700 hover:from-blue-electric-600 hover:to-blue-electric-800 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
@@ -46,7 +49,8 @@ const ContactSection = () => {
         </div>
 
         <div className="bg-gradient-to-r from-blue-electric-500/10 to-blue-electric-500/10 p-6 rounded-xl border border-blue-electric-500/30">
-          <p className="text-lg text-gray-300 mb-4">
+          {/* Citação: de text-gray-300 para text-white */}
+          <p className="text-lg text-white mb-4">
             <strong className="text-blue-electric-400">{contactContent.quote.text}</strong>
           </p>
           <p className="text-blue-electric-400 font-semibold">

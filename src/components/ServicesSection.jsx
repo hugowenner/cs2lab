@@ -9,7 +9,8 @@ const ServicesSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-electric-400 to-blue-electric-600 bg-clip-text text-transparent">
             {servicesContent.title}
           </h2>
-          <p className="text-xl text-gray-300">
+          {/* Subtítulo: de text-xl text-gray-300 para text-xl text-white */}
+          <p className="text-xl text-white">
             {servicesContent.subtitle}
           </p>
         </div>
@@ -21,7 +22,8 @@ const ServicesSection = () => {
                 <service.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-blue-electric-400">{service.title}</h3>
-              <p className="text-gray-300">{service.description}</p>
+              {/* Descrição do serviço: de text-gray-300 para text-white */}
+              <p className="text-white">{service.description}</p>
             </div>
           ))}
         </div>

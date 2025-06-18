@@ -19,49 +19,46 @@ export const heroContent = {
   button2Text: "Nossos Serviços",
 };
 
+// ... outras importações e conteúdos
+
 export const aboutSectionContent = {
-  title: "Quem Somos",
-  subtitle: "иo.ƒear™: Respeito, disciplina e sangue frio. Quem joga com medo, já perdeu.",
-  history: {
-    title: "Nossa Origem: O Legado de иo.ƒear™",
-    subtitle: "Forjada nas chamas da competição em **19 de Dezembro de 2011** 📅, carregamos uma essência inabalável: Força, Disciplina e Espírito de Equipe.",
-    foundersTitle: "⚔️ Arquitetos da Lenda: Membros Fundadores", // Melhorado
-    founders: [
-      "LorD 👑",
-      "Perna Peluda 🦊",
-      "BlackVibes ♠️",
-      "BANDIT_RJ 🔪",
-      "TufTuf malvadao 😈",
-      "Maop Bonham 🧠",
-      "Crals 🎯",
-      "Lorite 🛡️",
-      // Adicionei emojis para alguns membros, você pode personalizar mais
-    ],
-    motto: [ // Transformado em array para melhor estilização
-      "“Se o medo aparece, nós avançamos. 🚀",
-      "Se a pressão aumenta, nós permanecemos frios. ❄️",
-      "Se a derrota vem, nós aprendemos. 📈",
-      "Se a vitória chega, dividimos com o time.” 🏆"
-    ],
-    closing: [ // Transformado em array
-      "Aqui não existem estrelas isoladas. 🌌 Existem companheiros de equipe que confiam um no outro a cada round. 🤝",
-      "Bem-vindo ao иo.ƒear™. Agora você faz parte. Agora somos um só.  unity!", // Adicionei unity
-      "🟢 Respeite. 🟢 Aprenda. 🟢 Evolua. 🟢 Vença."
-    ]
-  },
-  mission: {
-    title: "Nossa Missão",
-    description: "Treinar. Evoluir. Vencer.\n\nConstruir um ambiente de treino, aprendizado e amizade.\n\nFormar jogadores com visão tática, comunicação clara e mentalidade vencedora.\n\nAqui o crescimento é coletivo: ninguém carrega sozinho — todos jogam pelo time.",
-  },
+      title: "Sobre Nós",
+      subtitle: "Conheça a história e os valores que nos movem.",
+      history: {
+        title: "Nossa Origem: Forjados na Amizade e na Batalha 🎮",
+        description: `A иo.ƒear™ Gaming Team surgiu em 19 de Dezembro de 2011, com raízes fincadas em Belo Horizonte, mas com a alma conectada às comunidades de São Paulo e Rio de Janeiro. Com mais de ${new Date().getFullYear() - 2011} anos de história, mais do que um time, somos uma comunidade de amigos, unidos pela paixão por jogos e pela competição.
+
+    Nossa essência é construída sobre Força, Disciplina e Espírito de Equipe. Desde o início, nosso objetivo sempre foi criar um ambiente onde o crescimento é coletivo e a amizade é o pilar de cada vitória.`,
+        foundersTitle: "Arquitetos da Nossa História 👑",
+        founders: [
+          "LorD",
+          "Perna Peluda",
+          "BlackVibes",
+          "BANDIT_RJ",
+          "TufTuf malvadao",
+          "Maop Bonham",
+          "Crals",
+          "Lorite",
+        ],
+        motto: "Se o medo aparece, nós avançamos. Se a pressão aumenta, nós permanecemos frios. Se a derrota vem, nós aprendemos. Se a vitória chega, dividimos com o time. 🏆",
+        // ... restante do content
+        communityMotto: [
+          "Aqui na иo.ƒear™, não existem estrelas isoladas, mas sim companheiros de equipe que confiam um no outro a cada round. Promovemos um espaço de treino e aprendizado contínuo, onde o respeito, a dedicação e a evolução são valores essenciais.",
+          "Seja bem-vindo à иo.ƒear™. Agora você faz parte. Agora somos um só.",
+        ],
+      },
+      // ... restante do aboutSectionContent
+
   values: {
-    title: "Regras de Conduta",
-    description: "\"Respeito gera confiança. Confiança gera vitória.\"\n\nиo.ƒear™ não é só um nome. É um compromisso.",
+    title: "Regras de Conduta", // Este título pode não ser mais visível, mas os itens podem ser úteis para um novo propósito
+    description: "Nossos princípios que guiam cada membro do time.",
     items: [
-      { icon: Handshake, label: "Respeito Total", description: "Com todos os membros." },
-      { icon: Shield, label: "Tolerância Zero", description: "Não toleramos ofensas, rage, desânimo ou comportamento tóxico." },
-      { icon: Brain, label: "Foco no Desenvolvimento", description: "Individual e coletivo." },
-      { icon: Award, label: "Compromisso", description: "Com o jogo, com a equipe e com a evolução." },
-      { icon: Sparkles, label: "Sem Ego", description: "Aqui não existe espaço para ego, toxicidade ou desânimo." },
+      { label: "Comunicação Clara", description: "Fale de forma objetiva e construtiva, dentro e fora do jogo.", icon: Handshake },
+      { label: "Respeito Mútuo", description: "Trate a todos com dignidade, independentemente de habilidade ou experiência.", icon: Heart },
+      { label: "Atitude Positiva", description: "Mantenha a calma e o foco, mesmo sob pressão.", icon: Sparkles },
+      { label: "Foco na Evolução", description: "Busque sempre aprender e melhorar, individualmente e em equipe.", icon: Brain },
+      { label: "Fair Play", description: "Jogue limpo e honre o espírito esportivo.", icon: Shield },
+      { label: "Comprometimento", description: "Dedique-se aos treinos e aos objetivos do time.", icon: Award },
     ],
   },
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Users, Trophy } from 'lucide-react';
-import { heroContent } from '../data'; // Certifique-se de que o data.js tem o conteúdo atualizado
+import { heroContent } from '../data';
 
 const HeroSection = ({ scrollToSection }) => {
   return (
@@ -18,11 +18,11 @@ const HeroSection = ({ scrollToSection }) => {
       </video>
 
       {/* Overlay para escurecer o vídeo e melhorar a legibilidade do texto */}
-      <div className="absolute inset-0 bg-gray-950 opacity-80 z-10"></div> {/* Aumentei a opacidade para 80% e cinza mais escuro */}
+      <div className="absolute inset-0 bg-gray-950 opacity-80 z-10"></div>
 
       {/* Animação de background existente, ajuste z-index para ficar acima do vídeo e abaixo do conteúdo */}
-      <div className="absolute inset-0 opacity-15 z-20"> {/* Aumentei a opacidade da animação para 15% */}
-        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-blue-electric-500 rounded-full blur-3xl animate-blob-pulse-slow"></div> {/* Animação mais suave */}
+      <div className="absolute inset-0 opacity-15 z-20">
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-blue-electric-500 rounded-full blur-3xl animate-blob-pulse-slow"></div>
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-electric-700 rounded-full blur-3xl animate-blob-pulse-slow delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-electric-600 rounded-full blur-3xl animate-blob-pulse-slow delay-500"></div>
       </div>
@@ -30,19 +30,19 @@ const HeroSection = ({ scrollToSection }) => {
       {/* Conteúdo da Seção Hero - z-index mais alto para ficar visível */}
       <div className="relative z-30 text-center max-w-5xl mx-auto px-4">
         <div className="mb-8" data-aos="fade-down" data-aos-duration="1000">
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-blue-electric-400 via-blue-electric-600 to-blue-electric-500 bg-clip-text text-transparent animate-text-gradient"> {/* Aumentei tamanho e adicionei animação de gradiente de texto */}
+          <h1 className="text-6xl md:text-8xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-blue-electric-400 via-blue-electric-600 to-blue-electric-500 bg-clip-text text-transparent animate-text-gradient text-shadow-hero-title"> {/* Adicionado text-shadow-hero-title */}
             {heroContent.title}
           </h1>
-          <p className="text-xl md:text-3xl text-gray-200 font-light mb-3 mt-4 tracking-wide" data-aos="fade-down" data-aos-delay="200">
+          <p className="text-xl md:text-3xl text-white font-light mb-3 mt-4 tracking-wide text-shadow-white-subtle" data-aos="fade-down" data-aos-delay="200"> {/* Adicionado text-shadow-white-subtle */}
             {heroContent.subtitle}
           </p>
-          <p className="text-lg md:text-2xl text-blue-electric-300 font-semibold uppercase tracking-widest" data-aos="fade-down" data-aos-delay="400">
+          <p className="text-lg md:text-2xl text-blue-electric-300 font-semibold uppercase tracking-widest text-shadow-white-subtle" data-aos="fade-down" data-aos-delay="400"> {/* Adicionado text-shadow-white-subtle */}
             {heroContent.tagline}
           </p>
         </div>
 
         <div className="space-y-4 mb-10" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed text-shadow-white-subtle"> {/* Adicionado text-shadow-white-subtle */}
             {heroContent.description}
           </p>
         </div>
